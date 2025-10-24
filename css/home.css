@@ -1,0 +1,158 @@
+body {
+    background-color: #121212; 
+    color: #e0e0e0; 
+}
+
+/* Header */
+.site-header {
+    background-color: #1c1c1c;
+}
+
+
+/* Botão de login */
+.btn-login {
+    background-color: #00bcd4;
+}
+
+.btn-login:hover {
+    background-color: #0097a7;
+}
+
+/* Barra de pesquisa */
+.search-bar {
+    /* max-width é definido em style.css */
+    background-color: #2a2a2a;
+    border: 1px solid #444;
+    color: #fff;
+}
+
+/* Cards de filmes */
+.movie-card {
+    background-color: #1e1e1e;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.4); /* Override do style.css */
+
+    /* Estilos específicos para centralizar o card no carrossel de 1 item */
+    margin: 0 auto;
+    max-width: 400px; 
+}
+
+/* .movie-card:hover é definido em style.css */
+
+.movie-card .card-title {
+    color: #00bcd4;
+}
+
+/* Botões dentro dos cards (Estes são específicos da home.css) */
+.movie-card .btn-primary {
+    background-color: #00bcd4;
+    border: none;
+}
+
+.movie-card .btn-primary:hover {
+    background-color: #0097a7;
+}
+
+/* Setas do carrossel */
+.carousel-control-prev,
+.carousel-control-next {
+    width: 10%; 
+    opacity: 0.9;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-size: 100% 100%;
+    filter: invert(100%); /* deveria deixar as setas brancas */
+}
+
+/* Setas ficam fora do conteúdo (Padrão Desktop) */
+.carousel-control-prev {
+    left: -60px;
+}
+.carousel-control-next {
+    right: -60px;
+}
+
+/* Em telas pequenas (celular), setas ficam fora, mas mais perto */
+@media (max-width: 767.98px) {
+    .carousel-control-prev {
+        left: -15px; /* Mais perto para não sair da tela */
+    }
+    .carousel-control-next {
+        right: -15px; /* Mais perto para não sair da tela */
+    }
+}
+/* ... (todo o CSS anterior) ... */
+
+/* Em telas pequenas (celular), setas ficam fora, mas mais perto */
+@media (max-width: 767.98px) {
+    /* Ajuste específico para o carrossel mobile */
+    #carouselFilmesMobile .carousel-control-prev {
+        left: -5px; /* Mais perto para não sair da tela */
+    }
+    #carouselFilmesMobile .carousel-control-next {
+        right: -5px; /* Mais perto para não sair da tela */
+    }
+
+    /* Ajuste para o carrossel desktop não ter setas estranhas no breakpoint */
+    #carouselFilmesDesktop .carousel-control-prev {
+        left: 0;
+    }
+    #carouselFilmesDesktop .carousel-control-next {
+        right: 0;
+    }
+}
+
+
+#horarios .btn.active {
+    background-color: #00bcd4;
+    color: #121212;
+    font-weight: bold;
+}
+
+/* Grade de Assentos */
+.seat-grid {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr); /* 8 colunas */
+    gap: 8px;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.seat {
+    background-color: #444;
+    color: #e0e0e0;
+    border-radius: 5px;
+    padding: 5px 0;
+    text-align: center;
+    cursor: pointer;
+    font-size: 0.8rem;
+    transition: background-color 0.2s;
+    user-select: none;
+}
+
+.seat:hover:not(.selected):not(.occupied) {
+    background-color: #666;
+}
+
+.seat.selected {
+    background-color: #00bcd4; /* Cor ciano para selecionado */
+    color: #121212;
+    font-weight: bold;
+}
+
+.seat.occupied {
+    background-color: #a33; /* Vermelho escuro para ocupado */
+    color: #777;
+    cursor: not-allowed;
+    text-decoration: line-through;
+}
+
+/* Resumo da Compra */
+#selected-seats-list .ticket-type-selector {
+    background-color: #2a2a2a;
+    color: #e0e0e0;
+    border: 1px solid #444;
+    border-radius: 4px;
+    margin-left: 10px;
+}
