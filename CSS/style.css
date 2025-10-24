@@ -1,0 +1,56 @@
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f6f9;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    margin-bottom: 3rem; /* 3rem é o valor equivalente ao 'mb-5' do Bootstrap */
+}
+
+
+.site-header {
+    background-color: #1e3d58;
+    color: #fff;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #fff; 
+    text-decoration: none; 
+}
+
+.logo:hover {
+    color: #fff; 
+    text-decoration: none;
+}
+
+
+.btn-login {
+    background-color: #3a7ca5;
+    color: #fff;
+    border: none;
+    transition: 0.3s;
+}
+
+.btn-login:hover {
+    background-color: #28597a;
+}
+
+.search-bar {
+    max-width: 250px;
+}
+
+.movie-card {
+    border: none;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.2s;
+}
+
+.movie-card:hover {
+    transform: scale(1.03);
+}
