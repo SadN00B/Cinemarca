@@ -44,7 +44,7 @@
             if (userEmail) {
                 // Se está logado e tentando acessar login/cadastro, manda para home
                 if (window.location.pathname.includes("login.html") || window.location.pathname.includes("cadastro.html")) {
-                    window.location.href = "home.html";
+                    window.location.href = "index.html";
                     return; 
                 }
                 
@@ -92,7 +92,7 @@
                 if (foundUser) {
                     // Sucesso! Cria o cookie
                     document.cookie = "loggedInUser=" + email + "; max-age=3600; path=/";
-                    window.location.href = "home.html";
+                    window.location.href = "index.html";
                 } else {
                     errorElement.textContent = "E-mail ou senha incorretos.";
                 }
@@ -348,7 +348,7 @@
 
             // 4. Confirma e redireciona
             alert(`Compra confirmada para ${user}!\nFilme: ${newBooking.movieName}\nHorário: ${newBooking.showtime}\nAssentos: ${newBooking.seats.map(s => s.id).join(', ')}\n\nObrigado!`);
-            window.location.href = "home.html";
+            window.location.href = "index.html";
         }
     },
 
@@ -366,4 +366,5 @@
 };
 
 // O .bind(CineApp) é para garantir que o 'this' dentro de init() seja o objeto CineApp
+
 document.addEventListener("DOMContentLoaded", CineApp.init.bind(CineApp));
